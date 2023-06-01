@@ -17,8 +17,3 @@ else{
     console.log('el alumno reprobo la matera con ');
     document.write('el alumno reprobo la matera' );
     }
-
-
-
-
-console.log(sum)
