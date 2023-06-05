@@ -6,7 +6,15 @@
 let sum = 0;
 for(let i=1; i<=3; i++){
     let not1 = Number(prompt('dijite su primera nota '));
-    sum = sum + not1;
+         if(not1 => 0 && not1 <= 5){
+        sum = sum + not1;
+         }
+        else{
+            console.log('la nota debe ser en un rango de 0 a 5');
+            document.write('la nota debe ser en un rango de 0 a 5');
+            i = i -1;
+        }
+    
 }
 sum = sum / 3 ;
 if(  3.4 <= sum){

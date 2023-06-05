@@ -49,12 +49,15 @@ else{
 }
  */
 
+
 let mate1 = 0;
+
+
 let nom = prompt('dijite el nmbre del alumno ');
 for(let i=1; i<=3; i++){
     let materia1 = prompt('dijite el nombre de la materia del alumno ');
     for(let i=1; i<=3; i++){
-        let notas = Number(prompt('dijite nota de matematicas '));
+        let notas = Number(prompt('dijite nota de  '));
         mate1 = mate1 + notas;
     }
     mate1 = mate1 / 3 ;
@@ -66,6 +69,6 @@ for(let i=1; i<=3; i++){
     else{
         console.log('el alumno reprobo la mateir '+materia1,' con ');
         document.write('el alumno reprobo la materia '+materia1,'', '</br>');
-}
+    }
 
 }
