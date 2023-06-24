@@ -1,59 +1,14 @@
-//{}
 
-//{} de tipo persona
-class Persona {
-    // Atributos ( Variables )
-   #id;         // # establece el atribito privado
-   #nombre;
-   #nacionalidad;
-
-    constructor(id, nombre, nacionalidad) {
-        this.#id=id
-        this.#nombre=nombre
-        this.#nacionalidad=nacionalidad
-    }
-}
-class Empleado extends Persona {
-      //atributos y o Propiedades
-      #area;
-      #cargo;
-      #salario;
-      #horario;
-      #funciones=[];
-      constructor( id, nombre, nacionalidad,area, cargo, salario, horario,funciones ) {
-        super(id,nombre,nacionalidad);
-        this.#cargo= cargo;
-        this.#salario= salario;
-        this.#horario= horario;
-        this.#area= area;
-
-      }
-  
-}
-
-class Universitario extends Empleado {
-      //atributos y o Propiedades (variables)
-      
-      #carrera;
-      #univercidad;
-      #semestre
-
-      constructor(id, nombre, nacionalidad, cargo, salario, carrera, univercidad, semestre){
-        super(id,nombre,nacionalidad,cargo,salario);
-        this.#carrera= carrera;
-        this.#univercidad= univercidad;
-        this.#semestre= semestre;
-
-      } 
+import Persona, { Alumno , Empleado } from './persona.js';
+import { Univercidad } from "./univercidad.js";
 
 
-  
-}
+const unalBog = new Univercidad (1, 'bogota ', 'univercidad nacional de colombia', );
 
-    // instanciar un objeto de una clase (instanciar / crear)
-    const personaGuatavo = new Persona (8372827187, 'jhon', 'colombiano');
-    console.log(personaGuatavo);
+const unalMed = new Univercidad (2, 'Medellin ', 'univercidad nacional de colombia');
 
-    const empleadoAxel = new Empleado(123445, 'axel', 'colombiano','desarrollador', 3000);
-    console.log('empleado axel: ',empleadoAxel );
-
+unalBog.addMienbros( new Alumno (1,'nicolas','masculino',18,'ing de sistemas',));
+unalBog.addMienbros( new Alumno (2,'accel','masculino',21,'ing de sistemas',3));
+unalBog.addMienbros( new Alumno (3,'maria','femenino',27,'ing de sistemas',2));
+unalBog.addMienbros( new Empleado (1231321,'bairon','masculino',35,'director area',3000));
+unalBog.addMienbros( new Alumno (4,'Ana Maria','femenino',27,'ing de sistemas',2));
